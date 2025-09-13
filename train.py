@@ -104,6 +104,6 @@ else:
             print(f"{label}: Precision={metrics['precision']:.2f}, Recall={metrics['recall']:.2f}, F1={metrics['f1-score']:.2f}")
 
     # 10. Lưu mô hình và tokenizer
-    model.save_pretrained("phobert_emotion_classifier")
-    tokenizer.save_pretrained("phobert_emotion_classifier")
+    model.save_pretrained("phobert_emotion_classifier-new")
+    tokenizer.save_pretrained("phobert_emotion_classifier-new")
     print("\nMô hình đã được huấn luyện và lưu lại thành công!")
