@@ -53,7 +53,7 @@ try:
         truncation=True
     )
 except Exception as e:
-    st.error(f"Lỗi khi tải mô hình PhoBERT: {str(e)}. Vui lòng kiểm tra thư mục PhoBERT_emotion_classifier.")
+    st.error(f"Lỗi khi tải mô hình PhoBERT: {str(e)}. Vui lòng kiểm tra thư mục phobert_emotion_classifier.")
     classifier = None
 
 def clean_text(text):
@@ -182,9 +182,53 @@ model = genai.GenerativeModel(
 )
 
 # --- GIAO DIỆN ỨNG DỤNG STREAMLIT ---
-st.set_page_config(layout="centered", page_title="Chatbot Tư vấn sức khỏe", page_icon = "🌕")
-st.title("Trò chuyện cùng Trang Trang 🌕❤️")
-st.write("Chào bạn, mình tên là Trang Trang. Mình ở đây để lắng nghe câu chuyện của bạn. Hãy chia sẻ bất cứ điều gì bạn đang nghĩ với mình nhé. Mình sẽ luôn ở đây để hỗ trợ và cùng bạn vượt qua những khó khăn nè ❤️.")
+st.set_page_config(layout="centered", page_title="Chatbot Trò chuyện", page_icon = "🌕")
+with st.sidebar.expander("ℹ️ Thông tin chung", expanded=False):
+    st.markdown("### Thông tin chung")
+    st.write("""
+    Chatbot "Trang Trang" là một dự án cá nhân được phát triển nhằm hỗ trợ sơ bộ về tâm lý, sử dụng các công nghệ AI bao gồm 
+    mô hình PhoBERT và API Google Generative AI. Mục tiêu của chatbot là cung cấp không gian an toàn để người dùng chia sẻ 
+    cảm xúc và nhận gợi ý cơ bản. Đây là một ứng dụng thử nghiệm và không thay thế dịch vụ tư vấn chuyên môn từ các chuyên gia 
+    tâm lý hoặc bác sĩ.
+    """)
+    
+    st.markdown("---")
+    st.write("**Phiên bản hiện tại:** 1.0")
+    st.write("**Nhà phát triển:** Võ Nguyễn Thái Học")
+    st.write("**Liên hệ:** vonguyenthaihocilt260@gmail.com")
+    st.write("**Nguồn mở:** Dự án được lưu trữ tại GitHub repository.")
+    
+    st.markdown("---")
+    st.markdown("### Thông Báo Pháp Lý")
+    st.write("""
+    Chatbot "Tâm An" được phát triển như một dự án cá nhân và chỉ mang tính chất thông tin, thử nghiệm. Các phản hồi từ chatbot 
+    có thể không chính xác, không đầy đủ hoặc chứa thiên kiến. Người dùng chịu trách nhiệm hoàn toàn cho bất kỳ quyết định hoặc 
+    hành động nào dựa trên các phản hồi này và nên thực hiện với sự giám sát của con người để đảm bảo an toàn và phù hợp.
+
+    Người tạo không chịu trách nhiệm về bất kỳ thiệt hại, mất mát hoặc hậu quả nào phát sinh từ việc sử dụng chatbot. Người dùng không nên nhập dữ liệu cá nhân, nhạy cảm hoặc được điều chỉnh (ví dụ: thông tin sức khỏe, tài chính) vào hệ thống. Bằng cách sử 
+    dụng chatbot, bạn đồng ý rằng các đầu vào và phản hồi (gọi chung là "Nội dung") có thể được ghi lại để cải thiện hệ thống, 
+    tuân thủ các quy định pháp luật hiện hành.
+
+    Dự án này không liên kết hoặc được xác nhận bởi bất kỳ tổ chức thương mại hoặc nhà cung cấp API bên thứ ba nào.
+    """)
+
+    st.markdown("---")
+    st.markdown("### Bản Quyền")
+    st.write("""
+    © 2025 HocVoNgThai. All rights reserved.
+    Nội dung, mã nguồn và tài liệu liên quan đến chatbot "Trang Trang" được sở dụng cho mục đích học tập và nghiên cứu với điều kiện trích dẫn nguồn gốc. 
+    Mong các bạn không tự ý sao chép, phân phối hoặc sử dụng lại cho mục đích thương mại.
+    """)
+    
+    st.markdown("---")
+    st.markdown("### Liên Kết Hữu Ích")
+    st.link_button("LinkdIn", "https://linkedin.com/in/th1126/")
+    st.link_button("Facebook", "https://facebook.com/th1126/")
+    st.link_button("GitHub dự án", "https://github.com/HocVoNgThai/Vietnamese-Stress-Detector-Chatbot.git")
+
+
+st.title("Trò chuyện cùng Trang Trang 🌕")
+st.write("Mình tên là Trang Trang. Hãy chia sẻ bất cứ điều gì bạn đang nghĩ với mình nhé. Mình luôn sẵn lòng lắng nghe câu chuyện của bạn và cùng bạn vượt qua những khó khăn nè ❤️.")
 st.markdown("---")
 
 # Khởi tạo trạng thái
@@ -247,7 +291,7 @@ if user_prompt := st.chat_input("Bạn đang cảm thấy thế nào?"):
             st.session_state.qids_scores = []
             st.session_state.current_question = 0
             st.session_state.survey_prompted = False
-        st.stop()  # Chờ phản hồi tiếp theo
+        st.stop() 
 
     # Gợi ý khảo sát nếu đủ lượt hoặc có red flag
     user_messages_count = len([m for m in st.session_state.chat_session.history if m.role == "user"])
