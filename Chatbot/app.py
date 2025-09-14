@@ -201,12 +201,12 @@ with st.sidebar.expander("ℹ️ Thông tin chung", expanded=False):
     st.markdown("---")
     st.markdown("### Thông Báo Pháp Lý")
     st.write("""
-    Chatbot "Tâm An" được phát triển như một dự án cá nhân và chỉ mang tính chất thông tin, thử nghiệm. Các phản hồi từ chatbot 
+    Chatbot "Trang Trang" được phát triển như một dự án cá nhân và chỉ mang tính chất thông tin, thử nghiệm. Các phản hồi từ chatbot 
     có thể không chính xác, không đầy đủ hoặc chứa thiên kiến. Người dùng chịu trách nhiệm hoàn toàn cho bất kỳ quyết định hoặc 
     hành động nào dựa trên các phản hồi này và nên thực hiện với sự giám sát của con người để đảm bảo an toàn và phù hợp.
 
     Người tạo không chịu trách nhiệm về bất kỳ thiệt hại, mất mát hoặc hậu quả nào phát sinh từ việc sử dụng chatbot. Người dùng không nên nhập dữ liệu cá nhân, nhạy cảm hoặc được điều chỉnh (ví dụ: thông tin sức khỏe, tài chính) vào hệ thống. Bằng cách sử 
-    dụng chatbot, bạn đồng ý rằng các đầu vào và phản hồi (gọi chung là "Nội dung") có thể được ghi lại để cải thiện hệ thống, 
+    dụng chatbot, bạn đồng ý rằng các đầu vào và phản hồi có thể được ghi lại để cải thiện hệ thống, 
     tuân thủ các quy định pháp luật hiện hành.
 
     Dự án này không liên kết hoặc được xác nhận bởi bất kỳ tổ chức thương mại hoặc nhà cung cấp API bên thứ ba nào.
