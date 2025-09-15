@@ -25,6 +25,7 @@
 git clone https://github.com/HocVoNgThai/Vietnamese-Stress-Detector-Chatbot.git
 cd Vietnamese-Stress-Detector-Chatbot
 bash setup.sh
+cd ..
 cd Chatbot
 nano .env # Thay API key của bạn
 streamlit run app.py
@@ -43,5 +44,5 @@ streamlit run app.py
 - Mở rộng thêm tính năng chat bằng giọng nói và phân tích cảm xúc qua audio.
 
 ---
-## License
+## License 🔐
 © 2025 HocVoNgThai. All rights reserved.
