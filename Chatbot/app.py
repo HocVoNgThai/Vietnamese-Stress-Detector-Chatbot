@@ -195,8 +195,8 @@ with st.sidebar.expander("ℹ️ Thông tin chung", expanded=False):
     st.markdown("---")
     st.write("**Phiên bản hiện tại:** 1.0")
     st.write("**Nhà phát triển:** Võ Nguyễn Thái Học")
-    st.write("**Liên hệ:** vonguyenthaihocilt260@gmail.com")
-    st.write("**Nguồn mở:** Dự án được lưu trữ tại GitHub repository.")
+    st.write("**Liên hệ:** Vonguyenthaihocilt260@gmail.com")
+    st.write("**Nguồn mở:** Dự án được lưu trữ tại GitHub ở mục Liên kết.")
     
     st.markdown("---")
     st.markdown("### Thông Báo Pháp Lý")
@@ -222,9 +222,32 @@ with st.sidebar.expander("ℹ️ Thông tin chung", expanded=False):
     
     st.markdown("---")
     st.markdown("### Liên Kết Hữu Ích")
-    st.link_button("LinkdIn", "https://linkedin.com/in/th1126/")
-    st.link_button("Facebook", "https://facebook.com/th1126/")
-    st.link_button("GitHub dự án", "https://github.com/HocVoNgThai/Vietnamese-Stress-Detector-Chatbot.git")
+    linkedin_icon = "https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg"
+    facebook_icon = "https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg"
+    github_icon = "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+    mail_icon = "https://github.com/user-attachments/assets/70e22fce-05b9-40c3-a30c-77abb5491751"
+
+    col1, col2, col3, col4 = st.columns(4)
+    with col1:
+        st.markdown(
+            f'<a href="https://linkedin.com/in/th1126/" target="_blank"><img src="{linkedin_icon}" width="40"></a>',
+            unsafe_allow_html=True
+        )
+    with col2:
+        st.markdown(
+            f'<a href="https://facebook.com/th1126/" target="_blank"><img src="{facebook_icon}" width="40"></a>',
+            unsafe_allow_html=True
+        )
+    with col3:
+        st.markdown(
+            f'<a href="https://github.com/HocVoNgThai/Vietnamese-Stress-Detector-Chatbot.git" target="_blank"><img src="{github_icon}" width="40"></a>',
+            unsafe_allow_html=True
+        )
+    with col4:
+        st.markdown(
+            f'<a href="mailto:vonguyenthaihocilt260@gmail.com" target="_blank"><img src="{mail_icon}" width="40"></a>',
+            unsafe_allow_html=True
+        )
 
 
 st.title("Trò chuyện cùng Trang Trang 🌕")
