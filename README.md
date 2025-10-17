@@ -1,3 +1,14 @@
+<p align="center">
+  <img src="https://visitor-badge.laobi.icu/badge?page_id=HocVoNgThai.Vietnamese-Stress-Detector-Chatbot" alt="visitor badge"/>
+  <img src="https://img.shields.io/github/license/HocVoNgThai/Vietnamese-Stress-Detector-Chatbot" alt="license"/>
+  <img src="https://img.shields.io/github/forks/HocVoNgThai/Vietnamese-Stress-Detector-Chatbot?style=social" alt="forks"/>
+  <img src="https://img.shields.io/github/last-commit/HocVoNgThai/Vietnamese-Stress-Detector-Chatbot?style=social" alt="last commit"/>
+  <img src="https://img.shields.io/github/stars/HocVoNgThai/Vietnamese-Stress-Detector-Chatbot.svg?style=social&label=Star" alt="stars"/>
+  <img src="https://img.shields.io/github/languages/top/HocVoNgThai/Vietnamese-Stress-Detector-Chatbot"/>
+  <img src="https://img.shields.io/github/languages/count/HocVoNgThai/Vietnamese-Stress-Detector-Chatbot"/>
+</p>
+
+
 <div align="center">
   
   # CHATBOT TÂM SỰ VÀ PHÁT HIỆN CÁC VẤN ĐỀ TÂM LÝ
