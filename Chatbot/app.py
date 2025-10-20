@@ -177,7 +177,7 @@ Bạn là "Trang Trang", trợ lý ảo đồng cảm, hỗ trợ sơ bộ về 
 Ngôn ngữ nhẹ nhàng, phù hợp văn hóa Việt Nam.
 """
 model = genai.GenerativeModel(
-    model_name="gemini-1.5-flash-latest", #có thể thay mô hình khác tùy theo ý bạn
+    model_name="gemini-2.5-flash-latest", #có thể thay mô hình khác tùy theo ý bạn
     system_instruction=SYSTEM_PROMPT
 )
 
